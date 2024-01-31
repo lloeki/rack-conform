@@ -66,6 +66,16 @@ export RACK_CONFORM_ENDPOINT="http://localhost:9292"
 bundle exec sus
 ```
 
+### Thin
+
+``` bash
+export BUNDLE_GEMFILE="gems/thin-rack-v3.rb"
+bundle install
+export RACK_CONFORM_SERVER="thin start -a localhost -p 9292"
+export RACK_CONFORM_ENDPOINT="http://localhost:9292"
+bundle exec sus
+```
+
 ### Starting A Server
 
 You can also start a server running the conform application for independent testing (e.g. using `curl`).
